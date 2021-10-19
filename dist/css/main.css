@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  background-color: #19a2ae;
+  font-family: "Kumbh Sans", sans-serif;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+body::before, body::after {
+  content: "";
+  background-image: url(../../images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  width: 32.5rem;
+  height: 30rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -50;
+}
+body::after {
+  background-image: url(../../images/bg-pattern-top.svg);
+  top: 0;
+  left: 0;
+  transform: rotate(180deg);
+}
+
+main {
+  border-radius: 1em;
+  overflow: hidden;
+  background-color: #fff;
+  width: 20rem;
+  height: 22rem;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+}
+main .cover-photo {
+  background-image: url(../../images/bg-pattern-card.svg);
+  grid-row: span 2;
+}
+main .person-details {
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  position: relative;
+}
+main .person-details .profile-photo {
+  grid-row: span 1;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0.3em solid #fff;
+}
+main .person-details .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-row: -2/-1;
+  transform: translate(0%, -25%);
+}
+main .person-details .text h1 {
+  font-size: 1rem;
+}
+main .person-details .text h2 {
+  font-size: 0.9rem;
+}
+main .profile-details {
+  grid-row: -2/-1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-flow: row nowrap;
+  border-top: 0.1em solid #969696;
+}
+main .profile-details > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .profile-details > div h1 {
+  font-size: 1rem;
+}
+main .profile-details > div h6 {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+}
+main .grayish-color {
+  color: #969696;
+}
+main .thin-font {
+  font-weight: 100;
+}
+
+/*# sourceMappingURL=main.css.map */
